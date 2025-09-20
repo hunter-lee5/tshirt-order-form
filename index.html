@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMMK Designs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--
+<form action="https://formspree.io/f/xblanabe" method="POST">
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
+--->
+
+<body>
+
+<h2>T-Shirt Order Form</h2>
+
+<label for="shirtCount">How many items do you want?</label>
+<input type="number" id="shirtCount" min="1">
+<button onclick="generateShirtQuestions()">Next</button>
+
+<form id="orderForm" action="https://formspree.io/f/xblanabe" method="POST">
+    <div id="contactInformation">
+        <h3>Contact Info</h3>
+
+    </div>
+    <div id="shirtQuestions"></div>
+    <button type="submit">Submit Order</button>
+</form>
+
+<script>
+function generateShirtQuestions() {
+    const count = parseInt(document.getElementById("shirtCount").value);
+    const container = document.getElementById("shirtQuestions");
+    container.innerHTML = ''; // Clear previous questions
+
+    if (isNaN(count) || count < 1) {
+        alert("Please enter a number between 1 and 10.");
+        return;
+    }
+
+    for (let i = 1; i <= count; i++) {
+        const group = document.createElement('div');
+        group.className = 'shirt-group';
+        group.innerHTML = `
+        <h3>Item ${i}</h3>
+        <label>Type of Shirt:
+            <select name=item${i}_type" required>
+            <option value="">Select Type</option>
+            <option>T-Shirt</option>
+            <option>Sweatshirt</option>
+            </select>
+        <label><br>
+        <label>Size:
+            <select name="item${i}_size" required>
+            <option value="">Select Size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>XXXL</option>
+            <option>XXXXL</option>
+            </select>
+        </label><br>
+        <label>Color:
+            <input type="text" name="item${i}_color" required>
+        </label><br>
+        <label>Style:
+            <input type="text" name="item${i}_style" required>
+        </label><br>
+        `;
+        container.appendChild(group);
+    }
+}
+</script>
+
+</body>
