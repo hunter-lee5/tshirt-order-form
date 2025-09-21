@@ -1,3 +1,17 @@
+function showText() {
+    const venmoButton = document.querySelector('input[name="payment"][value="venmo"]');
+    const message = document.getElementById("venmoText")
+
+    if (venmoButton.checked) {
+        message.style.display = "block";
+    }
+    else {
+        message.style.display = "none";
+    }
+}
+
+
+
 function generateItemQuestions() {
     const count = parseInt(document.getElementById("itemCount").value);
     const container = document.getElementById("itemQuestions");

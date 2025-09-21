@@ -48,10 +48,13 @@
     <h3>Payment Type</h3>
     <div id="paymentType">
         <div class="payment-group">
-            <input type="radio" id="cash" name="payment" value="cash">
+            <input type="radio" id="cash" name="payment" value="cash" onclick="showText()">
             <label for="cash">Cash</label><br>
-            <input type="radio" id="venmo" name="payment" value="venmo">
+            <input type="radio" id="venmo" name="payment" value="venmo" onclick="showText()">
             <label for="venmo">Venmo</label><br>
+            <div id="venmoText" style="display: none;">
+                Example Payment on Venmo: 'John Doe | HSE'
+            </div>
         </div>
 
     </div>
