@@ -1,0 +1,18 @@
+Questions Needed for shirts:
+    Quantity
+    Sweatshirt/tshirt
+    Color
+    Size
+    Design
+    Running total?
+
+Questions for Contact
+    Type of Payment
+        Cash
+        Vennmo
+            Kristas Venmo
+                "When submitting, put name of order and "HSE""
+    Phone Number
+    Email
+
+    

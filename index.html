@@ -24,64 +24,55 @@
 
 <h2>T-Shirt Order Form</h2>
 
-<label for="shirtCount">How many items do you want?</label>
-<input type="number" id="shirtCount" min="1">
-<button onclick="generateShirtQuestions()">Next</button>
-
 <form id="orderForm" action="https://formspree.io/f/xblanabe" method="POST">
+
+    <h3>Contact Info</h3>
     <div id="contactInformation">
-        <h3>Contact Info</h3>
+
+        <div class="contact-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="contact-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="contact-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+    </div>
+
+    <h3>Payment Type</h3>
+    <div id="paymentType">
+        <div class="payment-group">
+            <input type="radio" id="cash" name="payment" value="cash">
+            <label for="cash">Cash</label><br>
+            <input type="radio" id="venmo" name="payment" value="venmo">
+            <label for="venmo">Venmo</label><br>
+        </div>
 
     </div>
-    <div id="shirtQuestions"></div>
+
+
+    <h3>Order Details</h3>
+
+    <div id="shirt-orders">
+        <div class="order-group">
+            <label for="itemCount">How many items do you want?</label>
+            <input type="number" id="itemCount" min="1">
+            <button onclick="generateItemQuestions()">Next</button>
+        </div>
+
+    </div>
+
     <button type="submit">Submit Order</button>
+
 </form>
 
-<script>
-function generateShirtQuestions() {
-    const count = parseInt(document.getElementById("shirtCount").value);
-    const container = document.getElementById("shirtQuestions");
-    container.innerHTML = ''; // Clear previous questions
-
-    if (isNaN(count) || count < 1) {
-        alert("Please enter a number between 1 and 10.");
-        return;
-    }
-
-    for (let i = 1; i <= count; i++) {
-        const group = document.createElement('div');
-        group.className = 'shirt-group';
-        group.innerHTML = `
-        <h3>Item ${i}</h3>
-        <label>Type of Shirt:
-            <select name=item${i}_type" required>
-            <option value="">Select Type</option>
-            <option>T-Shirt</option>
-            <option>Sweatshirt</option>
-            </select>
-        <label><br>
-        <label>Size:
-            <select name="item${i}_size" required>
-            <option value="">Select Size</option>
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>XXXXL</option>
-            </select>
-        </label><br>
-        <label>Color:
-            <input type="text" name="item${i}_color" required>
-        </label><br>
-        <label>Style:
-            <input type="text" name="item${i}_style" required>
-        </label><br>
-        `;
-        container.appendChild(group);
-    }
-}
-</script>
+<script src="script.js"></script>
 
 </body>
+</html>
