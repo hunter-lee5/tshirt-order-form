@@ -35,8 +35,8 @@ function generateItemQuestions() {
         <label>Color:
             <input type="text" name="item${i}_color" required>
         </label><br>
-        <label>Style:
-            <input type="text" name="item${i}_style" required>
+        <label>Design:
+            <input type="text" name="item${i}_design" required>
         </label><br>
         `;
         container.appendChild(group);
