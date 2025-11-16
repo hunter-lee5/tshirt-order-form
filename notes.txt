@@ -1,16 +1,16 @@
 Questions Needed for shirts:
-    Quantity
-    Sweatshirt/tshirt
-    Color
-    Size
-    Design
-    Running total?
+    Quantity                    Done
+    Sweatshirt/tshirt           Done    
+    Color                       Done
+    Size                        Done
+    Design                      Done
+    Running total?  
 
 Questions for Contact
-    Type of Payment
-        Cash
+    Type of Payment             Done
+        Cash                    Done
         Vennmo
-            Kristas Venmo
+            Kristas Venmo       Done
                 "When submitting, put name of order and "HSE""
     Phone Number
     Email
