@@ -50,16 +50,78 @@
 
 
     <h3>Order Details</h3>
+
+    <div class ="price-container">
+        <div class ="pricing-box">
+            <details>
+            <summary>Item Pricing</summary>
+            <h3>T-Shirt Prices</h3>
+                <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Kids</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <td>Small-XL</td>
+                    <td>$17</td>
+                </tr>
+                <tr>
+                    <td>XXL</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>XXXL</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>XXXXL</td>
+                    <td>$21</td>
+                </tr>
+                </table>
+
+        <div class ="pricing-box">
+            <h3>Sweatshirt Prices</h3>
+                <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Youth</td>
+                    <td>$21</td>
+                </tr>
+                <tr>
+                    <td>Small-XL</td>
+                    <td>$25</td>
+                </tr>
+                <tr>
+                    <td>XXL</td>
+                    <td>$27</td>
+                </tr>
+                <tr>
+                    <td>XXXL</td>
+                    <td>$28</td>
+                </tr>
+                <tr>
+                    <td>XXXXL</td>
+                    <td>$29</td>
+                </tr>
+                </table>
+            
+            </details>
+        </div>
+    </div>
+
+
     <div id="shirt-orders">
         <div class="order-group">
             <label for="itemCount">How many items do you want?</label>
             <input type="number" id="itemCount" min="1">
-            <button type="button" onclick="generateItemQuestions()">Go</button>
-        </div>
-        <div class="order-group">
-            <div id="itemQuestions"></div>
-        </div>
-        
+            <button type="button" onclick="generateItemQuestions()">Continue</button>
         </div>
         <div class="order-group">
             <div id="itemQuestions"></div>
